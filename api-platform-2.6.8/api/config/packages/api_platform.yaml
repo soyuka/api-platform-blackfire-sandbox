@@ -1,0 +1,16 @@
+api_platform:
+    title: Hello API Platform
+    version: 1.0.0
+    # Mercure integration, remove if unwanted
+    mercure: ~
+    resource_class_directories:
+        - '%kernel.project_dir%/src/Entity'
+    mapping:
+        paths:
+            - '%kernel.project_dir%/src/Entity'
+    # Good cache defaults for REST APIs
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
+
